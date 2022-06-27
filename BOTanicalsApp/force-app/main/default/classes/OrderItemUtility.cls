@@ -37,7 +37,7 @@ public with sharing class OrderItemUtility {
                         //TO DO 2.4: Create a new bouquet and set values
                         OrderItem freeBouquet = new OrderItem(
                             OrderId = currentOrder.ID,
-                            //PricebookEntryId = entry.Id,
+                            PricebookEntryId = entry.Id,
                             numberOfFlowers__c = 3,
                             description = 'FREE Bouquet',
                             Quantity = 1,
@@ -54,6 +54,7 @@ public with sharing class OrderItemUtility {
                 }//TO DO 2.6: Close the "if" and "for loop" sections -> end for
                 
             //TO DO 3.2: Use DML to add the new list of newBouquets
+            insert newBouquets;
 
         //TO DO 3.3: Close de if section
 
