@@ -15,14 +15,14 @@ public with sharing class OrderItemUtility {
 
                     //Use SOQL to get the pricebook entry ID associated with the bonusProduct and store it in an sObject variable called entry
                     //Every Product has an associated PricebookEntry
-                    List<PricebookEntry> entryList = [SELECT Id, Product2Id FROM PricebookEntry WHERE Product2Id = :bonusProduct.Id]
+                    List<PricebookEntry> entryList = [SELECT Id, Product2Id FROM PricebookEntry WHERE Product2Id = :bonusProduct.Id];
 
                     PricebookEntry entry = new PricebookEntry();
 
                     if (entryList.size() > 0){
                         entry = entryList[0];
                     }
-            }
+            
 
                 //TO DO 2.1: Create a list to store any new bouquets we'll insert later
                 List<OrderItem> newBouquets = new List<OrderItem>();
@@ -56,7 +56,7 @@ public with sharing class OrderItemUtility {
             //TO DO 3.2: Use DML to add the new list of newBouquets
             insert newBouquets;
 
-        //TO DO 3.3: Close de if section
+            }//TO DO 3.3: Close de if section
 
 
         } //end method
