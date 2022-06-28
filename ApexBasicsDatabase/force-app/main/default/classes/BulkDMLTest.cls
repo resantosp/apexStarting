@@ -1,6 +1,6 @@
 public with sharing class BulkDMLTest {
     public BulkDMLTest() {
-        //Creae a list of contacts
+        //Create a list of contacts
         List<Contact> conList = new List<Contact>{
             new Contact(FirstName='Jor', LastName='Smith',Department='Finance'),
             new Contact(FirstName='Kathy',LastName='Smith',Department='Technology'),
