@@ -2,7 +2,6 @@
 //automatically create 3 contacts... One for Director, another for Sales Lead and one last one for Marketing lead. Make sure that these 3 contacts get linked to that new account.
 public with sharing class CreateContactForAccount {
     public static void createContacts(List<Account> accList) { //creating method to receive the list from trigger
-        //List<Account> accIds = [SELECT Id FROM Account];
         
         List<Contact> conList = new List<Contact>();
 
@@ -13,8 +12,8 @@ public with sharing class CreateContactForAccount {
             conList.add(con2);
             Contact con3 = new Contact(LastName='LN3', Title='Sales Lead', AccountId=a.Id);
             conList.add(con3);
-        }
+        }//End for loop
 
         insert conList;
-    }
-}
+    }//End the method
+}//End the class
