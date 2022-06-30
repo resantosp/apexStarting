@@ -7,9 +7,14 @@ public with sharing class CreateContactForAccount {
         List<Contact> conList = new List<Contact>();
 
         for (Account a : accList){
-            conList.add(LastName='Smith',
-                        Title='Director');
-            
+            Contact con1 = new Contact(LastName='LN1', Title='Director', AccountId=a.Id);
+            conList.add(con1);
+            Contact con2 = new Contact(LastName='LN2', Title='Marketing Lead', AccountId=a.Id);
+            conList.add(con2);
+            Contact con3 = new Contact(LastName='LN3', Title='Sales Lead', AccountId=a.Id);
+            conList.add(con3);
         }
+
+        insert conList;
     }
 }
