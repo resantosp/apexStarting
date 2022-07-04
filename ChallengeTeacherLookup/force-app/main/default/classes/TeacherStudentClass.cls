@@ -1,4 +1,5 @@
 public with sharing class TeacherStudentClass {
+    //Method for increasing the number of students after create or undelete
     public static void increaseNoOfStudents(List<Student__c> stdList) { //after insert, after undelete
         List<Id> teacherIds = new List<Id>(); //create a list to store the id for the teachers - this list is a helper
 
