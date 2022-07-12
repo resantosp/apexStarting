@@ -1,0 +1,11 @@
+<apex:component controller="FindFirstToPerformer" access="global">
+    <apex:dataTable value="{!TopPerformer}" var="trailheadUser" cellpadding="4"> 
+        
+        <apex:column style="font-size: 30px;">
+            <center><img src="{!trailheadUser.trailheadapp__Avatar__c}" width="50" height="50"/></center>
+            {!trailheadUser.Name}
+            <center><img src="https://media.giphy.com/media/jV5QfpMI6XHdHsXhwx/giphy.gif" width="50" height="50"/></center>
+        </apex:column>
+       
+    </apex:dataTable>
+</apex:component>

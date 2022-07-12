@@ -1,0 +1,30 @@
+<apex:component controller="FindTopPerformers" access="global">
+    <apex:dataTable value="{!TopPerformers}" var="trailheadUser" cellpadding="4"> 
+                
+        <style> <!-- iniciating css class to get the headers of the table on center -->
+		.ct{
+		text-align:center;
+		}
+        </style> <!-- end css class -->
+        
+        <apex:column headerClass="ct">
+            <apex:facet name="header"> </apex:facet>
+            {!IF((trailheadUser.Name == topPerformers[0].Name),"🏆  " + trailheadUser.Name,
+            	IF((trailheadUser.Name == topPerformers[1].Name),"🥈  " + trailheadUser.Name,"🥉  " + trailheadUser.Name))}
+        </apex:column>
+        
+        <apex:column headerClass="ct" style="text-align:center;">
+            <apex:facet name="header">Total Points</apex:facet>
+            {!trailheadUser.trailheadapp__Total_Points__c}
+        </apex:column>
+        
+        <apex:column headerClass="ct" style="text-align:center;">
+            <apex:facet name="header">Trailhead Profile</apex:facet>
+            <span>
+			<a href="{!trailheadUser.trailheadapp__Profile_URL__c}">{!trailheadUser.Name}'s Trailhead Profile</a>
+			</span>
+        </apex:column>
+       
+        
+    </apex:dataTable>
+</apex:component>
