@@ -1,4 +1,4 @@
-trigger TeacherStudentTrigger on Student__c (after insert, after delete, after undelete) {
+trigger TeacherStudentTrigger on Student__c (after insert, after delete, after undelete) { //insert after update so if the student changes the teacher...
     if ((Trigger.isInsert && Trigger.isAfter) || (Trigger.isUndelete && Trigger.isAfter)){
         TeacherStudentClass.increaseNoOfStudents(Trigger.new);
         //See: Trigger.new returns a list of sObjects that can only be modified in before triggers BUT we don't aim to modify the record, so it's ok to use it in here
