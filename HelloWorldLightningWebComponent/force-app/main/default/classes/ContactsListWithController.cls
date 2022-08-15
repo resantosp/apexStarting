@@ -9,4 +9,10 @@ public class ContactsListWithController {
         );
         return results;
     }
+    public void sortByLastName() {
+        this.sortOrder = 'LastName';
+    }
+    public void sortByFirstName() {
+        this.sortOrder = 'FirstName';
+    }
 }

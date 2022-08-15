@@ -1,0 +1,16 @@
+<apex:page controller="NewCaseListController">
+    <apex:form>
+        <apex:pageBlock title="Case List" id="case_list">
+            <apex:repeat value="{! newCases }" var="case">
+                <apex:pageBlockTable value="{! newCases }" var="case">
+                    <apex:column value="{! case.Id }">
+                        <apex:facet name="header">
+                            <apex:outputLink value="https://wise-impala-esg226-dev-ed.lightning.force.com/{!case.Id}">{!case.Id}</apex:outputLink>
+                        </apex:facet>
+                    </apex:column>
+                    <apex:column value="{! case.CaseNumber}" />
+                </apex:pageBlockTable>
+            </apex:repeat>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
