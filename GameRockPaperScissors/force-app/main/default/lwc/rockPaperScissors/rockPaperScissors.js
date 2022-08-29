@@ -12,4 +12,17 @@ export default class RockPaperScissors extends LightningElement {
     playerGuess;
     computerGuess;
     winner;
+
+    /**
+     * 
+     * so when the user clicks the buttom, it should take the value out of the event and bind it up to our playerGuess property and render that on the screen because of the following method
+     */
+    handleClick(event){
+        this.playerGuess = event.target.name;
+    }
+
+    generateComputerGuess(){
+        const random = Math.floor(Math.random() * 3);
+        console.log('the random number is ${random}');
+    }
 }

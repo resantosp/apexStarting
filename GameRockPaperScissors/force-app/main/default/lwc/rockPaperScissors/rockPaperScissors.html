@@ -7,17 +7,23 @@
             </p>
             <p class="slds-var-m-vertical_small">Winner: {winner}</p>
             <p class="slds-var-m-vertical_small">Your Guess: {playerGuess}</p>
-            <p class="slds-var-m-vertical_small">Computer Guess: </p>
+            <p class="slds-var-m-vertical_small">Computer Guess: {computerGuess}</p>
             <lightning-button label="Rock"
                               variant="neutral"
-                              name="rock"></lightning-button>
+                              onclick={handleClick}
+                              name="rock">
+                            </lightning-button>
             <lightning-button label="Paper"
                               class="slds-var-m-around_small"
                               variant="neutral"
-                              name="paper"></lightning-button>
+                              onclick={handleClick}
+                              name="paper">
+                            </lightning-button>
             <lightning-button label="Scissors"
                               variant="neutral"
-                              name="scissors"></lightning-button>
+                              onclick={handleClick}
+                              name="scissors">
+                            </lightning-button>
         </div>
     </lightning-card>
 </template>
