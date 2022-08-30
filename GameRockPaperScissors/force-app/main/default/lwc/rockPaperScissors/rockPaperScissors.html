@@ -1,27 +1,34 @@
 <template>
-    <lightning-card title="Rock Paper Scissors" icon-name="action:approval">
+    <lightning-card class="slds-align_absolute-center" title="READY TO PLAY?">
         <div class="slds-var-m-around_small">
+            <img style="max-height: 250px" class="slds-align_absolute-center" alt="Rock,Scissors,Paper,Lizard,Spock" src={testeImagem}/>
+            <hr>
             <p>
                 <span class="slds-var-p-right_medium">Player Score: {playerScore} </span>
                 <span>Computer Score: {computerScore}</span>
             </p>
+            <hr>
             <p class="slds-var-m-vertical_small">Winner: {winner}</p>
             <p class="slds-var-m-vertical_small">Your Guess: {playerGuess}</p>
             <p class="slds-var-m-vertical_small">Computer Guess: {computerGuess}</p>
+            <hr>
             <lightning-button label="Rock"
                               variant="neutral"
                               onclick={handleClick}
+                              icon-name="custom:custom4"
                               name="rock">
                             </lightning-button>
             <lightning-button label="Paper"
                               class="slds-var-m-around_small"
                               variant="neutral"
                               onclick={handleClick}
+                              icon-name="utility:page"
                               name="paper">
                             </lightning-button>
             <lightning-button label="Scissors"
                               variant="neutral"
                               onclick={handleClick}
+                              icon-name="utility:cut"
                               name="scissors">
                             </lightning-button>
         </div>
